@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>mTUVI</title>
+<title>mAnsao</title>
 <meta name="language" content="Vietnam">
 <meta http-equiv="content-language" content="vi">
  <style>
@@ -22,23 +22,17 @@
     <form name="astvudForm" id="astvudForm" method="post" action="">
     <p>
      Tên:
-      <label for="ID_TEN"></label>
-
-      <!-- <input type="text" name="ID_TEN" id="ID_TEN" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"> -->
-	  <input type="text" name="ID_TEN" id="ID_TEN";>
-    Nam/Nữ:
+		<label for="ID_TEN"></label>
+		<input type="text" name="ID_TEN" id="ID_TEN";>
+     Nam/Nữ:
         <label for="ID_GIOITINH"></label>
         <select name="ID_GIOITINH" id="ID_GIOITINH">
           <option value="1" selected>Nam</option>
           <option value="0">Nữ</option>
         </select>
     </p>
-    <p>Âm lịch (lunar calendar)
-  <input type="checkbox" name="ID_AMLICH" id="ID_AMLICH" onclick="ShowInput();">
-      <label for="ID_AMLICH"></label>
-    </p>
-      <fieldset id = 'ID_DL'>
-
+    
+    <fieldset id = 'ID_DL'>
         <legend>Dương lịch</legend>
           Ngày:
           <label for="ID_SELNGAYDUONG"></label>
@@ -91,7 +85,6 @@
             <option value="11">11</option>
             <option value="12">12</option>
           </select>
-
           Năm:
           <label for="ID_SELNAMDUONG3"></label>
           <select name="ID_SELNAMDUONG" id="ID_SELNAMDUONG" onchange="ChangeNgay()">
@@ -226,82 +219,24 @@
             <option value="1901">1901</option>
             <option value="1900">1900</option>
         </select>
-
          Giờ:
       <label for="ID_SELGIODUONG"></label>
       <select name="ID_SELGIODUONG" id="ID_SELGIODUONG">
-      	  <option value="1"> Tý 11:00pm hôm trước tới 12:59am hôm sau</option>
+      	  <option value="1"> Tý 11:00pm hôm trước - tới 12:59am hôm sau</option>
 		  <option value="2" selected> Sửu 1:00-2:59am</option>
 		  <option value="3"> Dần 3:00-4:59am</option>
 		  <option value="4"> Mão 5:00am-6:59am</option>
 		  <option value="5"> Thìn 7:00-8:59am</option>
 		  <option value="6"> Tỵ 9:00-10:59am</option>
 		  <option value="7"> Ngọ 11:00-12:59pm</option>
-		  <option value="8"> Mùi 1:00h-2:59pm</option>
+		  <option value="8"> Mùi 1:00-2:59pm</option>
 		  <option value="9"> Thân 3:00-4:59pm</option>
 		  <option value="10"> Dậu 5:00-6:59pm</option>
 		  <option value="11"> Tuất 7:00-8:59pm</option>
 		  <option value="12"> Hợi 9:00-10:59pm</option>
-      </select>
+      </select> <i>(nếu sinh sau 10:59pm: tăng lên 1 ngày và chọn giờ Tý)</i>
       </fieldset>
-      <fieldset id = 'ID_AL' style="display:none;">
-      <legend>Âm Lịch</legend>
-        Ngày:
-          <label for="ID_NGAY"></label>
-          <input name="ID_NGAY" type="text" id="ID_NGAY" size="10">
-
-        Tháng:
-          <label for="ID_THANG"></label>
-          <input name="ID_THANG" type="text" id="ID_THANG" size="10">
-          <label for="ID_THANG"></label>
-        Năm:
-          <label for="ID_CANNAM"></label>
-          <select name="ID_CANNAM" id="ID_CANNAM">
-            <option value="1">Giáp</option>
-            <option value="2">Ất</option>
-            <option value="3">Bính</option>
-            <option value="4">Đinh</option>
-            <option value="5">Mậu</option>
-            <option value="6">Kỷ</option>
-            <option value="7">Canh</option>
-            <option value="8">Tân</option>
-            <option value="9">Nhâm</option>
-            <option value="10">Quý</option>
-          </select>
-          <label for="ID_CHINAM"></label>
-          <select name="ID_CHINAM" id="ID_CHINAM">
-            <option value="1">Tý</option>
-            <option value="2">Sửu</option>
-            <option value="3">Dần</option>
-            <option value="4">Mão</option>
-            <option value="5">Thìn</option>
-            <option value="6">Tị</option>
-            <option value="7">Ngọ</option>
-            <option value="8">Mùi</option>
-            <option value="9">Thân</option>
-            <option value="10">Dậu</option>
-            <option value="11">Tuất</option>
-            <option value="12">Hợi</option>
-          </select>
-
-          Giờ:
-          <label for="ID_GIO"></label>
-          <select name="ID_GIO" id="ID_GIO">
-            <option value="1">Tý</option>
-            <option value="2">Sửu</option>
-            <option value="3">Dần</option>
-            <option value="4">Mão</option>
-            <option value="5">Thìn</option>
-            <option value="6">Tị</option>
-            <option value="7">Ngọ</option>
-            <option value="8">Mùi</option>
-            <option value="9">Thân</option>
-            <option value="10">Dậu</option>
-            <option value="11">Tuất</option>
-            <option value="12">Hợi</option>
-          </select>
-</fieldset>
-
+	    
       <p>Năm hạn:
         <label for="ID_SELNAMXEM"></label>
         <select name="ID_SELNAMXEM" id="ID_SELNAMXEM">
@@ -514,20 +449,6 @@
 <script type="text/javascript">
 var canvas = document.getElementById('myCanvas');
 var context = canvas.getContext('2d');
-
-function ShowInput()
-{
-	if (!document.getElementById('ID_AMLICH').checked)
-	{
-		document.getElementById('ID_DL').style.display = 'block';
-		document.getElementById('ID_AL').style.display = 'none';
-	}
-	else
-	{
-		document.getElementById('ID_DL').style.display = 'none';
-		document.getElementById('ID_AL').style.display = 'block';
-	}
-}
 
 function ChangeListNgay(tngay)
 {
@@ -871,14 +792,13 @@ function main()
 		context.fillText(chu, vx, vy);
 	}
 
-	var duonglich;
+	var duonglich = 1;
 	var ngayduong;
 	var thangduong;
 	var namduong;
 	var gioduong;
 	var phutduong;
 
-	var amlich;
 	var	ngay;
 	var thang;
 	var canmam;
@@ -897,24 +817,7 @@ function main()
 			namxem = parseInt(document.getElementById('ID_SELNAMXEM').options[i].value);
 	}
 
-	//if (document.getElementById('ID_THANGNHUAN').checked)
-	//	thangnhuan = 1;
-
-	duonglich = 1;
-	amlich = 0;
-
 	var ten = document.getElementById('ID_TEN').value;
-
-	if (!document.getElementById('ID_AMLICH').checked)
-	{
-		duonglich = 1;
-		amlich = 0;
-	}
-	else
-	{
-		amlich = 1;
-		duonglich = 0;
-	}
 
 	if (document.getElementById('ID_SAOLUU').checked)
 	{
@@ -925,103 +828,65 @@ function main()
 		saoluu = 0;
 	}
 	
-	//Lấy giới tính (nam: 1, nữ: 0)
+	//Lấy giới tính (Nam: 1, Nữ: 0)
 	var list = document.getElementById('ID_GIOITINH');
     for (var i = 0; i < list.options.length; ++i)
 	{
-         if(list.options[i].selected)
+         if (list.options[i].selected)
             gioitinh = parseInt(list.options[i].value);
     }
 
-	//lấy thông tin ngày tháng năm giờ sinh âm lịch
-	if (amlich == 1)
+	//Lấy thông tin ngày tháng năm giờ sinh
+	for (i = 0; i< document.getElementById('ID_SELNGAYDUONG').length; i++)
 	{
-		list = document.getElementById('ID_CANNAM');
-            for (var i = 0; i < list.options.length; ++i)
-			{
-                if(list.options[i].selected)
-                    cannam = parseInt(list.options[i].value);
-            }
-		list = document.getElementById('ID_CHINAM');
-            for (var i = 0; i < list.options.length; ++i)
-			{
-                if(list.options[i].selected)
-                    chinam = parseInt(list.options[i].value);
-            }
-		list = document.getElementById('ID_GIO');
-      		for (var i = 0; i < list.options.length; ++i)
-			{
-                if(list.options[i].selected)
-                    gio = parseInt(list.options[i].value);
-            }
-		ngay = parseInt(document.getElementById('ID_NGAY').value);
-		thang = parseInt(document.getElementById('ID_THANG').value);
-		namduong2 = parseInt(document.getElementById('ID_NAMDUONG2').value);
-		if (cannam != fix10(namduong2 % 10 + 7) || chinam !=fix12(namduong2 % 12 + 9))
-		{
-			alert("Năm Dương Lịch không chính xác. Xin vui lòng nhập lại!");
-			return;
-		}
-		var listtemp = new Array();
-		//listtemp = convertLunar2Solar(ngay, thang, namduong2, thangnhuan, 7.0)
-		listtemp = convertLunar2Solar(ngay, thang, namduong2, 0, 7.0)
-		ngayduong = listtemp[0];
-		thangduong = listtemp[1];
-		namduong = listtemp[2];
-
+		if (document.getElementById('ID_SELNGAYDUONG').options[i].selected)
+			ngayduong = parseInt(document.getElementById('ID_SELNGAYDUONG').options[i].value);
 	}
-	//lấy thông tin ngày sinh theo giờ dương
-	else if (duonglich == 1)
+	
+	for (i = 0; i< document.getElementById('ID_SELTHANGDUONG').length; i++)
 	{
-		//ngayduong = parseInt(document.getElementById('ID_TXTNGAYDUONG').value);
-		for (i = 0; i< document.getElementById('ID_SELNGAYDUONG').length; i++)
-		{
-			if (document.getElementById('ID_SELNGAYDUONG').options[i].selected)
-				ngayduong = parseInt(document.getElementById('ID_SELNGAYDUONG').options[i].value);
-		}
-		//thangduong = parseInt(document.getElementById('ID_TXTTHANGDUONG').value);
-		for (i = 0; i< document.getElementById('ID_SELTHANGDUONG').length; i++)
-		{
-			if (document.getElementById('ID_SELTHANGDUONG').options[i].selected)
-				thangduong = parseInt(document.getElementById('ID_SELTHANGDUONG').options[i].value);
-		}
-		//namduong = parseInt(document.getElementById('ID_TXTNAMDUONG').value);
-		for (i = 0; i< document.getElementById('ID_SELNAMDUONG').length; i++)
-		{
-			if (document.getElementById('ID_SELNAMDUONG').options[i].selected)
-				namduong = parseInt(document.getElementById('ID_SELNAMDUONG').options[i].value);
-		}
-		//gioduong = parseInt(document.getElementById('ID_TXTGIODUONG').value);
-		for (i = 0; i< document.getElementById('ID_SELGIODUONG').length; i++)
-		{
-			if (document.getElementById('ID_SELGIODUONG').options[i].selected)
-				gioduong = parseInt(document.getElementById('ID_SELGIODUONG').options[i].value);
-		}
-		//phutduong = parseInt(document.getElementById('ID_PHUTDUONG').value);
-		dl = convertSolar2Lunar(ngayduong, thangduong, namduong, 7.0);
-
-		ngay = dl[0];
-		thang = dl[1];
-		var candoi = dl[2] % 10;
-		var chidoi = dl[2] % 12;
-
-		candoi = (candoi + 7)
-		if (candoi > 10) candoi = candoi - 10;
-		cannam = candoi;
-
-		chidoi = chidoi + 9;
-		if (chidoi > 12) chidoi = chidoi - 12;
-		chinam = chidoi;
-
-		//gioduong = gioduong + phutduong / 60;
-
-		var ktti = 1;
-
-		gio = gioduong;
-
-		//thangnhuan = dl[3];
+		if (document.getElementById('ID_SELTHANGDUONG').options[i].selected)
+			thangduong = parseInt(document.getElementById('ID_SELTHANGDUONG').options[i].value);
 	}
+	
+	for (i = 0; i< document.getElementById('ID_SELNAMDUONG').length; i++)
+	{
+		if (document.getElementById('ID_SELNAMDUONG').options[i].selected)
+			namduong = parseInt(document.getElementById('ID_SELNAMDUONG').options[i].value);
+	}
+	
+	for (i = 0; i< document.getElementById('ID_SELGIODUONG').length; i++)
+	{
+		if (document.getElementById('ID_SELGIODUONG').options[i].selected)
+			gioduong = parseInt(document.getElementById('ID_SELGIODUONG').options[i].value);
+	}
+	
+	dl = convertSolar2Lunar(ngayduong, thangduong, namduong, 7.0);
 
+	ngay = dl[0];
+	thang = dl[1];
+	var candoi = dl[2] % 10;
+	var chidoi = dl[2] % 12;
+
+	candoi = (candoi + 7)
+	if (candoi > 10) 
+	{
+		candoi = candoi - 10;
+	}
+	cannam = candoi;
+
+	chidoi = chidoi + 9;
+	if (chidoi > 12) 
+	{
+		chidoi = chidoi - 12;
+	}
+	chinam = chidoi;
+
+	var ktti = 1;
+
+	gio = gioduong;
+
+	
 	var can = new Array();
 	var chi = new Array();
 
@@ -1217,8 +1082,7 @@ function main()
 	context.fillText("Tháng:", x, y + 62);
 	context.fillStyle = '#353580';
 	var texttemp = "";
-	//if (thangnhuan == 1)
-	 	//texttemp = " n";
+	
 	context.fillText(thangduong + " ("+thang+texttemp+")", x + 80, y + 62);
 	context.fillText(can[canthang] + " " + chi[chithang],x + 130, y + 62);
 
@@ -1398,7 +1262,7 @@ function main()
 		n = n + step;
 	}
 
-// TUAN, TRIET
+// an TUAN, TRIET
 function antuantriet(tcannam, tchinam)
 {
 	var tuankhong;
@@ -1555,14 +1419,12 @@ function antuantriet(tcannam, tchinam)
 		{
 			tuankhongluu = 5;
 			x = xcung[tuankhongluu] + w - 25;
-			//y = ycung[tuankhongluu] + h - 5;
 			y = ycung[tuankhongluu] - 7;
 		}
 		else if (tuankhongluu == 11 || tuankhongluu == 12)
 		{
 			tuankhongluu = 11;
 			x = xcung[tuankhongluu] - 25;
-			//y = ycung[tuankhongluu] - 7;
 			y = ycung[tuankhongluu] - 7 - 2 - 14;
 		}
 		else if (tuankhongluu == 7 || tuankhongluu == 8)
@@ -1608,14 +1470,11 @@ function antuantriet(tcannam, tchinam)
 
 			if (trietkhongluu == 2 || trietkhongluu == 4)
 			{
-				//x = xcung[trietkhongluu] + w / 2 - 25;
 				x = xcung[trietkhongluu] + 5;
-				//y = ycung[trietkhongluu] + h - 7;
 				y = ycung[trietkhongluu] + h - 7;
 			}
 			else if (trietkhongluu == 7)
 			{
-				//x = xcung[trietkhongluu] + w / 2 - 25;
 				x = xcung[trietkhongluu] + w - 50 - 5;
 				y = ycung[trietkhongluu] + h - 7;
 			}
@@ -1641,26 +1500,22 @@ function antuantriet(tcannam, tchinam)
 		{
 			if (trietkhongluu == 7)
 			{
-				//x = xcung[trietkhongluu] + w / 2 - 35;
 				x = xcung[trietkhongluu] + 5;
 				y = ycung[trietkhongluu] + h - 7;
 			}
 			else if (trietkhongluu == 2 || trietkhongluu == 4)
 			{
-				//x = xcung[trietkhongluu] + w / 2 - 35;
 				x = xcung[trietkhongluu] + 5;
 				y = ycung[trietkhongluu] + h - 7;
 			}
 			else if (trietkhongluu == 5)
 			{
 				x = xcung[trietkhongluu] + w - 35;
-				//y = ycung[trietkhongluu] + h - 5;
 				y = ycung[trietkhongluu] + h + 7 + 2 ;
 			}
 			else if (trietkhongluu == 11)
 			{
 				x = xcung[trietkhongluu] - 35;
-				//y = ycung[trietkhongluu] - 7;
 				y = ycung[trietkhongluu] - 7 - 2 - 14;
 			}
 
@@ -1674,7 +1529,7 @@ function antuantriet(tcannam, tchinam)
 	}
 }
 
-//an nhóm 1
+//an Cung
 function annhom1(tcungmenh, tcungthan)
 {
 	var nhom1 = new Array();
@@ -1707,7 +1562,7 @@ function annhom1(tcungmenh, tcungthan)
 	antuantriet(cannam, chinam);
 	annhom1(cungmenh, cungthan);
 
-//an nhóm 2
+//an Chính tinh
 	var line = new Array();
 	var row = new Array();
 	for (i=1;i<=12;i++)
@@ -1813,11 +1668,11 @@ function ansao(start, step, flag)
 {
 	var temp = 0;
 	var result;
-	//0 thi lui
+	//0 back
 	if (flag == 0)
 		temp = temp - step + 1;
 	else
-	//1 thi tien
+	//1 forward
 		temp = temp + step - 1;
 	result = fix12(temp + start);
 	return result;
@@ -2013,7 +1868,7 @@ function ansao(start, step, flag)
 		}
 	}
 	
-//an nhóm 3
+//an sao Chi
 	var xleft = new Array;
 	var xleft_adj = 8;
 	xleft[1] = xleft_adj;
@@ -2239,35 +2094,7 @@ function ansao(start, step, flag)
 	context.fillText("Hoa Cái", xleft[hoacai], yleft[hoacai]);
 	yleft[hoacai] += fh;
 	
-//an nhóm 4
-	// tmdo - var nhom4 = new Array();
-	// tmdo - nhom4[1] = "Văn Xương";
-	// tmdo - nhom4[2] = "Văn Khúc";
-	// tmdo - nhom4[3] = "Tả Phù";
-	// tmdo - nhom4[4] = "Hữu Bật";
-	// tmdo - nhom4[5] = "Ân Quang";
-	// tmdo - nhom4[6] = "Thiên Quý";
-	// tmdo - nhom4[7] = "Tam Thai";
-	// tmdo - nhom4[8] = "Bát Tọa";
-	// tmdo - nhom4[9] = "Thiên Khôi";
-	// tmdo - nhom4[10] = "Thiên Việt";
-	// tmdo - nhom4[11] = "Thai Phụ";
-	// tmdo - nhom4[12] = "Phong Cáo";
-	
-	// tmdo - var in4 = new Array();
-	// tmdo - in4[1] = vanxuong;
-	// tmdo - in4[2] = vankhuc;
-	// tmdo - in4[3] = taphu;
-	// tmdo - in4[4] = huubat;
-	// tmdo - in4[5] = fix12(vanxuong + ngay - 2);	// Ân Quang
-	// tmdo - in4[6] = fix12(vankhuc - ngay + 2);		// Thiên Quý
-	// tmdo - in4[7] = fix12(taphu + ngay - 1);	// Tam Thai
-	// tmdo - in4[8] = fix12(huubat - ngay + 1);	// Bát Tọa
-	// tmdo - in4[9] = thienkhoi;	
-	// tmdo - in4[10] = thienviet;
-	// tmdo - in4[11] = fix12(vankhuc + 2);	// Thai Phụ 
-	// tmdo - in4[12] = fix12(vankhuc - 2);	// Phong Cáo
-
+//an sao Tháng, Giờ
 	// VAN XUONG
 	context.textAlign = 'left';
 	context.fillText("Văn Xương", xleft[vanxuong], yleft[vanxuong]);
@@ -2360,7 +2187,7 @@ function ansao(start, step, flag)
 	yleft[phongcao] += fh;
 	
 	
-//an nhóm 6
+//an sao Can, Lộc Tồn, Kình Đà
 	var nhom6 = new Array();
 	nhom6[1] = "LỘC TỒN";
 	nhom6[2] = "KÌNH DƯƠNG";
@@ -2429,7 +2256,7 @@ function ansao(start, step, flag)
 	context.fillText("Đường Phù", xright[duongphu], yright[duongphu]);
 	yright[duongphu] += fh;
 	
-//an nhóm 5
+//an tứ Hóa, Riêu, Y, KHÔNG KIẾP
 	var nhom5 = new Array()
 	nhom5[1] = "Thiên Riêu";
 	nhom5[2] = "Thiên Y";
@@ -2593,13 +2420,13 @@ function ansao(start, step, flag)
 	var hoatinh, linhtinh;
 	if (amduong == "Dương Nam" || amduong == "Âm Nữ")
 	{
-		hoatinh = ansao(bd_hoa, gio, 1);	//in5[10] = ansao(bd_hoa, gio, 1);
-		linhtinh = ansao(bd_linh, gio, 0);	//in5[11] = ansao(bd_linh, gio, 0);
+		hoatinh = ansao(bd_hoa, gio, 1);
+		linhtinh = ansao(bd_linh, gio, 0);
 	}
 	else
 	{
-		hoatinh = ansao(bd_hoa, gio, 0);	//in5[10] = ansao(bd_hoa, gio, 0);
-		linhtinh = ansao(bd_linh, gio, 1);	//in5[11] = ansao(bd_linh, gio, 1);
+		hoatinh = ansao(bd_hoa, gio, 0);
+		linhtinh = ansao(bd_linh, gio, 1);
 	}
 	context.textAlign = 'right';
 	context.fillText("HỎA TINH", xright[hoatinh], yright[hoatinh]);
@@ -2609,46 +2436,34 @@ function ansao(start, step, flag)
 	yright[linhtinh] += fh;
 	
 	
-//an nhom 8
-	// tmdo - var nhom8 = new Array();
-	// tmdo - nhom8[1] = "Thiên La";
-	// tmdo - nhom8[2] = "Địa Võng";
-	// tmdo - nhom8[3] = "Thiên Thương";
-	// tmdo - nhom8[4] = "Thiên Sứ";
-	// tmdo - nhom8[5] = "Thiên Khốc";
-	// tmdo - nhom8[6] = "Phá Toái";
-	// tmdo - nhom8[7] = "Lưu Hà";
-	// tmdo - nhom8[8] = "Kiếp Sát";
-	// tmdo - nhom8[9] = "Thiên Mã";
-	
-	//var in8 = new Array();
-	
+//an sao cố định
+
 	// THIEN LA
-	var thienla = 3;	//in8[1] = 3;
+	var thienla = 3;
 	context.textAlign = 'right';
 	context.fillText("Thiên La", xright[thienla], yright[thienla]);
 	yright[thienla] += fh;
 
 	// DIA VONG
-	var diavong = 9;	//in8[2] = 9;
+	var diavong = 9;
 	context.textAlign = 'right';
 	context.fillText("Địa Võng", xright[diavong], yright[diavong]);
 	yright[diavong] += fh;
 	
 	// THIEN THUONG
-	var thienthuong = fix12(cungmenh + 5);	//in8[3] = fix12(cungmenh + 5);
+	var thienthuong = fix12(cungmenh + 5);
 	context.textAlign = 'right';
 	context.fillText("Thiên Thương", xright[thienthuong], yright[thienthuong]);
 	yright[thienthuong] += fh;
 	
 	// THIEN SU
-	var thiensu = fix12(cungmenh -5);	//in8[4] = fix12(cungmenh -5);
+	var thiensu = fix12(cungmenh -5);
 	context.textAlign = 'right';
 	context.fillText("Thiên Sứ", xright[thiensu], yright[thiensu]);
 	yright[thiensu] += fh;
 	
 	// THIEN KHOC
-	var thienkhoc = ansao(5, chinam, 0);	//in8[5] = ansao(5, chinam, 0);
+	var thienkhoc = ansao(5, chinam, 0);
 	context.textAlign = 'right';
 	context.fillText("Thiên Khốc", xright[thienkhoc], yright[thienkhoc]);
 	yright[thienkhoc] += fh;
@@ -2667,7 +2482,7 @@ function ansao(start, step, flag)
 	{
 		phatoai = 12;
 	}
-	//in8[6] = phatoai;
+	
 	context.textAlign = 'right';
 	context.fillText("Phá Toái", xright[phatoai], yright[phatoai]);
 	yright[phatoai] += fh;
@@ -2694,13 +2509,13 @@ function ansao(start, step, flag)
 		luuha = 10;
 	else if (cannam == 10)
 		luuha = 1;
-	//in8[7] = luuha;
+	
 	context.textAlign = 'right';
 	context.fillText("Lưu Hà", xright[luuha], yright[luuha]);
 	yright[luuha] += fh;
 	
 	// KIEP SAT
-	var kiepsat = fix12(tuongtinh + 5);	//in8[8] = fix12(tuongtinh + 5);
+	var kiepsat = fix12(tuongtinh + 5);
 	context.textAlign = 'right';
 	context.fillText("Kiếp Sát", xright[kiepsat], yright[kiepsat]);
 	yright[kiepsat] += fh;
@@ -2720,84 +2535,14 @@ function ansao(start, step, flag)
 		thienma = 10;
 	}
 	else thienma = 4;
-	//tmdo - in8[9] = thienma;
+	
 	context.textAlign = 'left';
 	context.fillText("Thiên Mã", xleft[thienma], yleft[thienma]);
 	yleft[thienma] += fh;
 
 
-//an nhom 7
-//	for (i = 1; i<=12; i++)
-//	{
-//		line[i] += 1;
-//		row[i] = 5;
-//	}
-	// tmdo - context.textAlign = 'left';
-	// tmdo - var nhom7 = new Array()
-	// tmdo - nhom7[1] = "TRƯỜNG SINH";
-	// tmdo - nhom7[2] = "MỘC DỤC";
-	// tmdo - nhom7[3] = "QUAN ĐỚI";
-	// tmdo - nhom7[4] = "LÂM QUAN";
-	// tmdo - nhom7[5] = "ĐẾ VƯỢNG";
-	// tmdo - nhom7[6] = "SUY";
-	// tmdo - nhom7[7] = "BỆNH";
-	// tmdo - nhom7[8] = "TỬ";
-	// tmdo - nhom7[9] = "MỘ";
-	// tmdo - nhom7[10] = "TUYỆT";
-	// tmdo - nhom7[11] = "THAI";
-	// tmdo - nhom7[12] = "DƯỠNG";
-
-	// tmdo - var in7 = new Array();
-	// tmdo - if (cuc == 2 || cuc == 5)
-		// tmdo - in7[1] = 7;
-	// tmdo - else if (cuc == 3)
-		// tmdo - in7[1] = 10;
-	// tmdo - else if (cuc == 4)
-		// tmdo - in7[1] = 4;
-	// tmdo - else if (cuc == 6)
-		// tmdo - in7[1] = 1;
-
-	// tmdo - for (i = 2; i<=12 ;i++)
-	// tmdo - {
-		// tmdo - if (amduong == "Dương Nam" || amduong == "Âm Nữ")
-			// tmdo - in7[i] = fix12(in7[i-1] + 1);
-		// tmdo - else
-			// tmdo - in7[i] = fix12(in7[i-1] - 1);
-	// tmdo - }
-
-	// tmdo - for (i = 1; i<=12;i++)
-	// tmdo - {
-		// tmdo - var mau;
-		//sao kim
-		// tmdo - mau = 'black';
-		// tmdo - if (i == 3 || i == 4 || i == 5)
-			// tmdo - mau = kim;
-		// tmdo - else if (i == 12)
-			// tmdo - mau = moc;
-		// tmdo - else if (i == 7)
-			// tmdo - mau = hoa;
-		// tmdo - else if (i == 9 || i==10 || i == 11)
-			// tmdo - mau = tho;
-		// tmdo - else mau = thuy;
-
-		// tmdo - if (row[in7[i]] + 20 >= w)
-		// tmdo - {
-			// tmdo - line[in7[i]] += 1;
-			// tmdo - row[in7[i]] = 5;
-		// tmdo - }
-		//tmdo printw(nhom7[i], mau, xcung[in7[i]] + 5, ycung[in7[i]] + h - 8.5);
-		//textUnderline(context, nhom7[i], xcung[in7[i]] + row[in7[i]], ycung[in7[i]] + line[in7[i]]*14, mau, "8pt", "left");
-		//row[in7[i]]+=w/2 - 5;
-	// tmdo - }
-	
-	
 	if (saoluu == 1)
 	{
-		//var canxem = namxem % 10;
-		//var chixem = namxem % 12;
-		//canxem = fix10(canxem + 7);
-		//chixem = fix12(chixem + 9);
-		
 		context.fillStyle = 'brown';
 		context.textAlign = 'right';
 	
@@ -3026,7 +2771,7 @@ function ansao(start, step, flag)
 	//yleft[phongcao] += fh;
 	
 	
-//an nhóm 6
+//an sao Can, Lộc Tồn, Kình Đà lưu
 	var nhom6luu = new Array();
 	nhom6luu[1] = "LỘC TỒN";
 	nhom6luu[2] = "KÌNH DƯƠNG";
@@ -3095,45 +2840,7 @@ function ansao(start, step, flag)
 	context.fillText("Đường Phù", xright[duongphuluu], yright[duongphuluu]);
 	yright[duongphuluu] += fh;
 	
-//an nhóm 5
-	// tmdo - var nhom5luu = new Array()
-	// tmdo - nhom5luu[1] = "Thiên Riêu";
-	// tmdo - nhom5luu[2] = "Thiên Y";
-	// tmdo - nhom5luu[3] = "THIÊN KHÔNG";
-	// tmdo - nhom5luu[4] = "ĐỊA KIẾP";
-	// tmdo - nhom5luu[5] = "HÓA QUYỀN";
-	// tmdo - nhom5luu[6] = "HÓA KHOA";
-	// tmdo - nhom5luu[7] = "HÓA LỘC";
-	// tmdo - nhom5luu[8] = "HÓA KỴ";
-	// tmdo - nhom5luu[9] = "Thiên Hình";
-	// tmdo - nhom5luu[10] = "Hỏa Tinh";
-	// tmdo - nhom5luu[11] = "Linh Tinh";
-	
-	// THIEN HINH
-	//var thienhinh = ansao(8,thang,1);	//in5[9] = ansao(8,thang,1);
-	//context.textAlign = 'right';
-	//context.fillText("Thien Hình", xright[thienhinh], yright[thienhinh]);
-	//yright[thienhinh] += fh;
-		
-	// THIEN RIEU, THIEN Y
-	//var thienrieu = fix12(thienhinh + 4);	//in5[1] = fix12(in5[9] + 4);
-	////var thieny = thienrieu;	//in5[2] = in5[1];
-	//context.textAlign = 'right';
-	//context.fillText("Thien Riêu/Y", xright[thienrieu], yright[thienrieu]);
-	//yright[thienrieu] += fh;
-	
-	// THIEN KHONG
-	//var thienkhong = ansao(10, gio, 0);	//in5[3] = ansao(10, gio, 0);
-	//context.textAlign = 'right';
-	//context.fillText("THIÊN KHÔNG", xright[thienkhong], yright[thienkhong]);
-	//yright[thienkhong] += fh;
-	
-	// DIA KIEP
-	//var diakiep = ansao(10, gio, 1);	//in5[4] = ansao(10, gio, 1);
-	//context.textAlign = 'right';
-	//context.fillText("ĐỊA KIẾP", xright[diakiep], yright[diakiep]);
-	//yright[diakiep] += fh;
-	
+//an tứ Hóa lưu
 	
 	var hoalocluu;
 	var hoaquyenluu;
@@ -3231,90 +2938,9 @@ function ansao(start, step, flag)
 	context.fillText("HÓA KỴ", xcenter[hoakyluu], ycenterbottom[hoakyluu]);
 	ycenterbottom[hoakyluu] -= fh;
 	
-	// HOA TINH, LINH TINH
-	//var bd_hoa;
-	//var bd_linh;
 
-	//if (chinam == 3 || chinam == 7 || chinam == 11)
-	//{
-	//	bd_hoa = 12;
-	//	bd_linh = 2;
-	//}
-	//else if (chinam == 4 || chinam == 8 || chinam == 12)
-	//{
-	//	bd_hoa = 8;
-	//	bd_linh = 9;
-	//}
-	//else if (chinam == 5 || chinam == 9 || chinam == 1)
-	//{
-	//	bd_hoa = 1;
-	//	bd_linh = 9;
-	//}
-	//else if (chinam == 6 || chinam == 10 || chinam == 2)
-	//{
-	//	bd_hoa = 2;
-	//	bd_linh = 9;
-	//}
-	
-	//var hoatinh, linhtinh;
-	//if (amduong == "Dương Nam" || amduong == "Âm Nữ")
-	//{
-	//	hoatinh = ansao(bd_hoa, gio, 1);	//in5[10] = ansao(bd_hoa, gio, 1);
-	//	linhtinh = ansao(bd_linh, gio, 0);	//in5[11] = ansao(bd_linh, gio, 0);
-	//}
-	//else
-	//{
-	//	hoatinh = ansao(bd_hoa, gio, 0);	//in5[10] = ansao(bd_hoa, gio, 0);
-	//	linhtinh = ansao(bd_linh, gio, 1);	//in5[11] = ansao(bd_linh, gio, 1);
-	//}
-	//context.textAlign = 'right';
-	//context.fillText("HỎA TINH", xright[hoatinh], yright[hoatinh]);
-	//yright[hoatinh] += fh;
-	//
-	//context.fillText("LINH TINH", xright[linhtinh], yright[linhtinh]);
-	//yright[linhtinh] += fh;
-	
-	
-//an nhom 8
-	// tmdo - var nhom8luu = new Array();
-	// tmdo - nhom8luu[1] = "Thiên La";
-	// tmdo - nhom8luu[2] = "Địa Võng";
-	// tmdo - nhom8luu[3] = "Thiên Thương";
-	// tmdo - nhom8luu[4] = "Thiên Sứ";
-	// tmdo - nhom8luu[5] = "Thiên Khốc";
-	// tmdo - nhom8luu[6] = "Phá Toái";
-	// tmdo - nhom8luu[7] = "Lưu Hà";
-	// tmdo - nhom8luu[8] = "Kiếp Sát";
-	// tmdo - nhom8luu[9] = "Thiên Mã";
-	
-	//var in8 = new Array();
-	
-	// THIEN LA
-	//var thienla = 3;	//in8[1] = 3;
-	//context.textAlign = 'right';
-	//context.fillText("Thiên La", xright[thienla], yright[thienla]);
-	//yright[thienla] += fh;
-
-	// DIA VONG
-	//var diavong = 9;	//in8[2] = 9;
-	//context.textAlign = 'right';
-	//context.fillText("Địa Võng", xright[diavong], yright[diavong]);
-	//yright[diavong] += fh;
-	
-	// THIEN THUONG
-	//var thienthuong = fix12(cungmenh + 5);	//in8[3] = fix12(cungmenh + 5);
-	//context.textAlign = 'right';
-	//context.fillText("Thiên Thương", xright[thienthuong], yright[thienthuong]);
-	//yright[thienthuong] += fh;
-	
-	// THIEN SU
-	//var thiensu = fix12(cungmenh -5);	//in8[4] = fix12(cungmenh -5);
-	//context.textAlign = 'right';
-	//context.fillText("Thiên Sứ", xright[thiensu], yright[thiensu]);
-	//yright[thiensu] += fh;
-	
 	// THIEN KHOC LUU
-	var thienkhocluu = ansao(5, chixem, 0);	//in8[5] = ansao(5, chinam, 0);
+	var thienkhocluu = ansao(5, chixem, 0);
 	context.textAlign = 'right';
 	context.fillText("Thiên Khốc", xright[thienkhocluu], yright[thienkhocluu]);
 	yright[thienkhocluu] += fh;
@@ -3333,7 +2959,7 @@ function ansao(start, step, flag)
 	{
 		phatoailuu = 12;
 	}
-	//in8[6] = phatoai;
+	
 	context.textAlign = 'right';
 	context.fillText("Phá Toái", xright[phatoailuu], yright[phatoailuu]);
 	yright[phatoailuu] += fh;
@@ -3360,13 +2986,13 @@ function ansao(start, step, flag)
 		luuhaluu = 10;
 	else if (canxem == 10)
 		luuhaluu = 1;
-	//in8[7] = luuha;
+	
 	context.textAlign = 'right';
 	context.fillText("Lưu Hà", xright[luuhaluu], yright[luuhaluu]);
 	yright[luuhaluu] += fh;
 	
 	// KIEP SAT LUU
-	var kiepsatluu = fix12(tuongtinhluu + 5);	//in8[8] = fix12(tuongtinh + 5);
+	var kiepsatluu = fix12(tuongtinhluu + 5);
 	context.textAlign = 'right';
 	context.fillText("Kiếp Sát", xright[kiepsatluu], yright[kiepsatluu]);
 	yright[kiepsatluu] += fh;
@@ -3386,7 +3012,7 @@ function ansao(start, step, flag)
 		thienmaluu = 10;
 	}
 	else thienmaluu = 4;
-	//tmdo - in8[9] = thienma;
+	
 	context.textAlign = 'left';
 	context.fillText("Thiên Mã", xleft[thienmaluu], yleft[thienmaluu]);
 	yleft[thienmaluu] += fh;
@@ -3404,23 +3030,6 @@ function saveIt()
 	var image = document.getElementById('canvasImg');
 	image.src = data;
 	image.style.display = 'block';
-
-	// var postdata = "CanvasData="+ data;
-	// var ajax = new XMLHttpRequest();
-	// ajax.open("POST", 'SaveImage.php', true);
-	// ajax.setRequestHeader('Content-Type', 'canvas/upload');
-	// ajax.onreadystatechange = function()
-	// {
-	// 	if (ajax.readyState == 4)
-	// 	{
-	// 	}
-	// }
-	// var n = Math.random();
-	// n = n * 10000000000;
-	// n = parseInt(n);
-	// var temp = n.toString();
-	// postdata = postdata + temp;
-	// ajax.send(postdata);
 }
 
 document.querySelector("#astvudForm").addEventListener("submit", function(e){
