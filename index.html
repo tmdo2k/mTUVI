@@ -239,7 +239,7 @@
          Giờ:
       <label for="ID_SELGIODUONG"></label>
       <select name="ID_SELGIODUONG" id="ID_SELGIODUONG">
-      	  <option value="1"> Tý 11:00pm hôm trước - tới 12:59am hôm sau</option>
+      	  <option value="1"> Tý 11:00pm hôm trước - tới 0:59am hôm sau</option>
 		  <option value="2" selected> Sửu 1:00-2:59am</option>
 		  <option value="3"> Dần 3:00-4:59am</option>
 		  <option value="4"> Mão 5:00am-6:59am</option>
@@ -2216,52 +2216,39 @@ function ansao(start, step, flag)
 	}
 	
 	// QUOC AN
-	var quocan = fix12(locton + 8);	//in6[16] = fix12(locton + 8);
+	var quocan = fix12(locton + 8);
 	context.textAlign = 'left';
 	context.fillText("Quốc Ấn", xleft[quocan], yleft[quocan]);
 	yleft[quocan] += fh;
 	
 	// DUONG PHU
-	var duongphu = fix12(locton - 7);	//in6[17] = fix12(locton - 7);
+	var duongphu = fix12(locton - 7);
 	context.textAlign = 'right';
 	context.fillText("Đường Phù", xright[duongphu], yright[duongphu]);
 	yright[duongphu] += fh;
 	
 //an tứ Hóa, Riêu, Y, KHÔNG KIẾP
-	var nhom5 = new Array()
-	nhom5[1] = "Thiên Riêu";
-	nhom5[2] = "Thiên Y";
-	nhom5[3] = "THIÊN KHÔNG";
-	nhom5[4] = "ĐỊA KIẾP";
-	nhom5[5] = "HÓA QUYỀN";
-	nhom5[6] = "HÓA KHOA";
-	nhom5[7] = "HÓA LỘC";
-	nhom5[8] = "HÓA KỴ";
-	nhom5[9] = "Thiên Hình";
-	nhom5[10] = "Hỏa Tinh";
-	nhom5[11] = "Linh Tinh";
 	
 	// THIEN HINH
-	var thienhinh = ansao(8,thang,1);	//in5[9] = ansao(8,thang,1);
+	var thienhinh = ansao(8,thang,1);
 	context.textAlign = 'right';
-	context.fillText("Thien Hình", xright[thienhinh], yright[thienhinh]);
+	context.fillText("Thiên Hình", xright[thienhinh], yright[thienhinh]);
 	yright[thienhinh] += fh;
 		
 	// THIEN RIEU, THIEN Y
-	var thienrieu = fix12(thienhinh + 4);	//in5[1] = fix12(in5[9] + 4);
-	//var thieny = thienrieu;	//in5[2] = in5[1];
+	var thienrieu = fix12(thienhinh + 4);
 	context.textAlign = 'right';
 	context.fillText("Thien Riêu/Y", xright[thienrieu], yright[thienrieu]);
 	yright[thienrieu] += fh;
 	
 	// THIEN KHONG
-	var thienkhong = ansao(10, gio, 0);	//in5[3] = ansao(10, gio, 0);
+	var thienkhong = ansao(10, gio, 0);
 	context.textAlign = 'right';
 	context.fillText("THIÊN KHÔNG", xright[thienkhong], yright[thienkhong]);
 	yright[thienkhong] += fh;
 	
 	// DIA KIEP
-	var diakiep = ansao(10, gio, 1);	//in5[4] = ansao(10, gio, 1);
+	var diakiep = ansao(10, gio, 1);
 	context.textAlign = 'right';
 	context.fillText("ĐỊA KIẾP", xright[diakiep], yright[diakiep]);
 	yright[diakiep] += fh;
@@ -2533,7 +2520,7 @@ function ansao(start, step, flag)
 		yrightbottom[bachholuu] -= fh;
 				
 		// THIEN HU, TUE PHA LUU
-		var huphaluu = fix12(thaitueluu + 6);	// Tuế Phá
+		var huphaluu = fix12(thaitueluu + 6);
 		context.fillText("Hư Phá", xright[huphaluu], yrightbottom[huphaluu]);
 		yrightbottom[huphaluu] -= fh;
 	
@@ -2550,7 +2537,7 @@ function ansao(start, step, flag)
 		// HONG LOAN LUU
 		var hongloanluu = ansao(2, chixem, 0);
 		context.textAlign = 'left';
-		context.fillText("Hồng Loan", xleft[hongloan], yleft[hongloan]);
+		context.fillText("Hồng Loan", xleft[hongloanluu], yleft[hongloanluu]);
 		yleft[hongloan] += fh;
 	
 		// LONG TRI LUU
@@ -2621,103 +2608,6 @@ function ansao(start, step, flag)
 		context.fillText("Hoa Cái", xleft[hoacailuu], yleft[hoacailuu]);
 		yleft[hoacailuu] += fh;
 	
-//an nhóm 4
-	// tmdo - var nhom4luu = new Array();
-	// tmdo - nhom4luu[1] = "Văn Xương";
-	// tmdo - nhom4luu[2] = "Văn Khúc";
-	// tmdo - nhom4luu[3] = "Tả Phù";
-	// tmdo - nhom4luu[4] = "Hữu Bật";
-	// tmdo - nhom4luu[5] = "Ân Quang";
-	// tmdo - nhom4luu[6] = "Thiên Quý";
-	// tmdo - nhom4luu[7] = "Tam Thai";
-	// tmdo - nhom4luu[8] = "Bát Tọa";
-	// tmdo - nhom4luu[9] = "Thiên Khôi";
-	// tmdo - nhom4luu[10] = "Thiên Việt";
-	// tmdo - nhom4luu[11] = "Thai Phụ";
-	// tmdo - nhom4luu[12] = "Phong Cáo";
-	
-	// tmdo - var in4luu = new Array();
-	// tmdo - in4luu[1] = vanxuongluu;
-	// tmdo - in4luu[2] = vankhucluu;
-	// tmdo - in4luu[3] = taphuluu;
-	// tmdo - in4luu[4] = huubatluu;
-	// tmdo - in4luu[5] = fix12(vanxuongluu + ngay - 2);	// Ân Quang
-	// tmdo - in4luu[6] = fix12(vankhucluu - ngay + 2);		// Thiên Quý
-	// tmdo - in4luu[7] = fix12(taphuluu + ngay - 1);	// Tam Thai
-	// tmdo - in4luu[8] = fix12(huubatluu - ngay + 1);	// Bát Tọa
-	// tmdo - in4luu[9] = thienkhoiluu;	
-	// tmdo - in4luu[10] = thienvietluu;
-	// tmdo - in4luu[11] = fix12(vankhucluu + 2);	// Thai Phụ 
-	// tmdo - in4luu[12] = fix12(vankhucluu - 2);	// Phong Cáo
-
-	// VAN XUONG
-	//context.textAlign = 'left';
-	//context.fillText("Văn Xương", xleft[vanxuongluu], yleft[vanxuongluu]);
-	//yleft[vanxuongluu] += fh;
-	
-	// VAN KHUC
-	//context.fillText("Văn Khúc", xleft[vankhucluu], yleft[vankhucluu]);
-	//yleft[vankhucluu] += fh;
-	
-	// TA PHU
-	//context.fillText("Tả Phù", xleft[taphuluu], yleft[taphuluu]);
-	//yleft[taphuluu] += fh;
-	
-	// HUU BAT
-	//if (huubat == taphu)
-		//{
-		//context.textAlign = 'right';
-		//context.fillText("Hữu Bật", xright[huubat], yright[huubat]);
-		//yright[huubat] += fh;
-		//}
-	//else
-		//{
-		//context.textAlign = 'left';
-		//context.fillText("Hữu Bật", xleft[huubat], yleft[huubat]);
-		//yleft[huubat] += fh;
-		//}
-	
-	// AN QUANG
-	//context.textAlign = 'left';
-	//var anquang = fix12(vanxuong + ngay - 2);
-	//context.fillText("Ân Quang", xleft[anquang], yleft[anquang]);
-	//yleft[anquang] += fh;
-
-	// THIEN QUY
-	//var thienquy = fix12(vankhuc - ngay + 2);
-	//if (thienquy == anquang)
-	//{
-		//context.textAlign = 'right';
-		//context.fillText("Thiên Quý", xright[thienquy], yright[thienquy]);
-		//yright[thienquy] += fh;
-	//}
-	//else
-	//{
-		//context.textAlign = 'left';
-		//context.fillText("Thiên Quý", xleft[thienquy], yleft[thienquy]);
-		//yleft[thienquy] += fh;
-	//}
-	
-	// TAM THAI
-	//context.textAlign = 'left';
-	//var tamthai = fix12(taphu + ngay - 1);
-	//context.fillText("Tam Thai", xleft[tamthai], yleft[tamthai]);
-	//yleft[tamthai] += fh;
-		
-	// BAT TOA
-	//var battoa = fix12(huubat - ngay + 1);
-	//if (battoa == tamthai)
-	//{
-		//context.textAlign = 'right';
-		//context.fillText("Bát Tọa", xright[battoa], yright[battoa]);
-		//yright[battoa] += fh;
-	//}
-	//else
-	//{
-		//context.textAlign = 'left';
-		//context.fillText("Bát Tọa", xleft[battoa], yleft[battoa]);
-		//yleft[battoa] += fh;
-	//}
 	
 	// THIEN KHOI
 	context.textAlign = 'left';
@@ -2728,18 +2618,6 @@ function ansao(start, step, flag)
 	context.textAlign = 'left';
 	context.fillText("Thiên Việt", xleft[thienvietluu], yleft[thienvietluu]);
 	yleft[thienvietluu] += fh;
-	
-	// THAI PHU
-	//var thaiphu = fix12(vankhuc + 2);
-	//context.textAlign = 'left';
-	//context.fillText("Thai Phụ", xleft[thaiphu], yleft[thaiphu]);
-	//yleft[thaiphu] += fh;
-	
-	// PHONG CAO
-	//var phongcao = fix12(vankhuc - 2);
-	//context.textAlign = 'left';
-	//context.fillText("Phong Cáo", xleft[phongcao], yleft[phongcao]);
-	//yleft[phongcao] += fh;
 	
 	
 //an sao Can, Lộc Tồn, Kình Đà lưu
@@ -2792,6 +2670,23 @@ function ansao(start, step, flag)
 	yright[dalaluu] += fh;
 	
 	// VONG BAC SY LUU
+	if (canxem % 2 == 0)
+		amduong = "Âm";
+	else
+		amduong = "Dương";
+	if (gioitinh == 1)
+		amduong = amduong + " Nam";
+	else
+		amduong = amduong + " Nữ";
+	
+	for (i=5; i<=15; i++)
+	{
+		if (amduong == "Dương Nam" || amduong == "Âm Nữ")
+			in6luu[i] = fix12(in6luu[i-1] + 1);
+		else
+			in6luu[i] = fix12(in6luu[i-1] - 1);
+	}
+	
 	context.textAlign = 'left';
 	for (i=4; i<=15; i++)
 	{
