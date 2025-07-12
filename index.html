@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>mAnsao</title>
+<title>mTUVI</title>
 <meta name="language" content="Vietnam">
 <meta http-equiv="content-language" content="vi">
  <style>
@@ -2538,7 +2538,7 @@ function ansao(start, step, flag)
 		var hongloanluu = ansao(2, chixem, 0);
 		context.textAlign = 'left';
 		context.fillText("Hồng Loan", xleft[hongloanluu], yleft[hongloanluu]);
-		yleft[hongloan] += fh;
+		yleft[hongloanluu] += fh;
 	
 		// LONG TRI LUU
 		var longtriluu = ansao(3, chixem, 1);
@@ -2609,12 +2609,12 @@ function ansao(start, step, flag)
 		yleft[hoacailuu] += fh;
 	
 	
-	// THIEN KHOI
+	// THIEN KHOI LUU
 	context.textAlign = 'left';
 	context.fillText("Thiên Khôi", xleft[thienkhoiluu], yleft[thienkhoiluu]);
 	yleft[thienkhoiluu] += fh;
 		
-	// THIEN VIET
+	// THIEN VIET LUU
 	context.textAlign = 'left';
 	context.fillText("Thiên Việt", xleft[thienvietluu], yleft[thienvietluu]);
 	yleft[thienvietluu] += fh;
